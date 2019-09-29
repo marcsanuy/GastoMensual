@@ -4,7 +4,7 @@ import shortid from 'shortid';
 
 function Formulario(props) {
 
-    const { guardargasto } = props;
+    const { guardargasto, guardarCrearGasto } = props;
 
     //state
     const [ nombreGasto, guardarNombreGasto ] = useState('');
@@ -30,8 +30,9 @@ function Formulario(props) {
         }
 
         //pasar gasto al componete principal
-
         guardargasto(gasto);
+        guardarCrearGasto(true);
+
 
         //elimninar alerta
         guardarError(false)
@@ -64,7 +65,7 @@ function Formulario(props) {
                 <input
                     type="number"
                     className="u-full-width"
-                    placeholder="Ej. 100€"
+                    placeholder="Ej. 100"
                     onChange={e => guardarCantidadGasto( parseInt(e.target.value, 10) )}
                     value={cantidadGasto}
                 />    
