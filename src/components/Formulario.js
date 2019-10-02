@@ -48,7 +48,7 @@ function Formulario(props) {
         >
             <h2>Agregar Gastos</h2>
 
-            {error ? <Error mensaje='Debes relenar ambos campos' /> : null}
+            {error ? <Error mensaje='Debes relenar ambos campos o Datos incorrectos' /> : null}
 
             <div className="campo">
                 <label>Concepto</label>
